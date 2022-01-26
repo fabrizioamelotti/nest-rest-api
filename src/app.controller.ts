@@ -12,7 +12,7 @@ export class AppController {
     summary: 'Pint the app',
   })
   @Get('ping')
-  async ping(): Promise<string> {
+  ping(): string {
     return 'pong';
   }
 
@@ -21,7 +21,7 @@ export class AppController {
     summary: 'Check the app version here',
   })
   @Get('version')
-  async version(): Promise<string> {
+  version(): string {
     return this.configService.get<string>('version');
   }
 }

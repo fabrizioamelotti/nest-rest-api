@@ -6,7 +6,7 @@ import {
 } from '@nestjs/swagger';
 
 export const UseSwagger = (app: INestApplication) => {
-  if (process.env.NODE_ENV?.toLowerCase() === 'prod') {
+  if (process.env.APP_NODE_ENV?.toLowerCase() === 'prod') {
     return;
   }
 
